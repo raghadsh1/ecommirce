@@ -1,0 +1,19 @@
+{%extends 'base.html '%}
+
+{% block content %}
+<div class="card mt-5">
+    <div class="card-body bg-secondary  ">
+        <div class="mt-5">
+            <form method="post" class="form-group">
+                {% csrf_token %}
+                {{form.as_p}}
+                <div class="pt-2">
+                    <srong>Not Yet !! <a href="{%url 'auth_register'%}">Register Now</srong>
+                </div>
+                <button class="btn btn-primary mt-3" type="submit">Login</button>
+            
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
